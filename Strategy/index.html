@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Explicación del Patrón Strategy</h1>
+    <p>
+        El patrón <strong>Strategy</strong> permite definir diferentes comportamientos (estrategias) para realizar una misma tarea.
+        En este caso, se aplica para calcular montos de venta bajo diferentes condiciones: ventas regulares, con descuento o en el extranjero.
+    </p>
+    <h2>Razones para usar este patrón</h2>
+    <ul>
+        <li><strong>Flexibilidad:</strong> Permite cambiar el comportamiento en tiempo de ejecución.</li>
+        <li><strong>Mantenimiento:</strong> Cada estrategia está encapsulada en su propia clase, simplificando el mantenimiento.</li>
+        <li><strong>Extensibilidad:</strong> Es fácil añadir nuevas estrategias sin modificar el código existente.</li>
+        <li><strong>Eliminación de condicionales:</strong> No necesitas usar múltiples bloques <code>if</code> o <code>switch</code>.</li>
+    </ul>
+    <h2>Funcionamiento del código</h2>
+    <p>
+        El contexto (<code>Salecontext</code>) utiliza diferentes estrategias para calcular el monto. 
+        Puedes cambiar la estrategia en tiempo de ejecución mediante el método <code>setStrategy()</code>.
+    </p>
+    
+
+    <h1>Caso Practico</h1>
+    <div>
+    <select id="slcOptions">
+        <option value="0">Lista</option>
+        <option value="1">Lista con detalle</option>
+        <option value="2">Imagen</option>
+    </select>
+</div>
+
+<div id="content">
+
+</div>
+
+    <script src="./js/strategy.js"></script>
+</body>
+</html>
