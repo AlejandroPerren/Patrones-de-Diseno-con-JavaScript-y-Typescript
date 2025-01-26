@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Patrón Observer</title>
 </head>
 <body>
+
 
     <input id="myText" type="text" oninput="change()">
 
     <div id="div1"></div>
     <div id="div2"></div>
+
+
+    <h1>Patrón Observer</h1>
+    <p>
+        El <strong>Patrón Observer</strong> es un patrón de diseño que pertenece a la categoría de los patrones de comportamiento.
+        Este patrón establece una relación de dependencia entre un objeto <strong>sujeto</strong> (Subject) y múltiples <strong>observadores</strong> (Observers),
+        de manera que cuando el sujeto cambia su estado, todos los observadores son notificados y actualizados automáticamente.
+    </p>
+    
+    <h2>¿Cómo funciona?</h2>
+    <p>El patrón Observer consta de los siguientes componentes principales:</p>
+    <ul>
+        <li>
+            <strong>Sujeto (Subject):</strong> 
+            Es el objeto observado. Contiene una lista de observadores registrados y es responsable de notificarles cuando ocurre un cambio en su estado.
+        </li>
+        <li>
+            <strong>Observadores (Observers):</strong>
+            Son los objetos que desean ser notificados de los cambios en el sujeto. Cada observador implementa un método que se ejecuta cuando se notifica un cambio.
+        </li>
+        <li>
+            <strong>Notificación:</strong>
+            Cuando el sujeto cambia su estado, envía una notificación a todos los observadores registrados para que puedan actualizarse.
+        </li>
+    </ul>
+
+    <h2>¿Para qué es útil?</h2>
+    <p>El Patrón Observer es útil en situaciones donde:</p>
+    <ul>
+        <li>Es necesario mantener sincronizados varios objetos con el estado de un objeto principal.</li>
+        <li>Se necesita implementar un sistema de eventos o notificaciones.</li>
+        <li>Se busca reducir el acoplamiento entre los objetos, ya que el sujeto no necesita conocer detalles específicos de los observadores.</li>
+    </ul>
+
+    <h2>Ejemplos comunes de uso</h2>
+    <ul>
+        <li>Interfaces gráficas de usuario, donde varios elementos deben actualizarse cuando cambia un modelo de datos.</li>
+        <li>Sistemas de publicación/suscripción, como notificaciones de eventos en aplicaciones.</li>
+        <li>Flujos de datos en tiempo real, como el seguimiento de acciones en una aplicación financiera.</li>
+    </ul>
 </body>
 <script src="./js/observer.js"></script>
 </html>
