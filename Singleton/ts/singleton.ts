@@ -1,5 +1,3 @@
-
-
 class SingletonTS{
     private static instance: SingletonTS;
 
