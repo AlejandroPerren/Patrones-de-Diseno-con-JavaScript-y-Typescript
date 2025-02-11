@@ -1,0 +1,102 @@
+
+# Patrones de Diseño  
+
+## 1. Creacionales  
+
+### **1.1 Singleton**  
+**Propósito:** Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global.  
+**Cómo funciona:** Se define una variable estática en la clase, un método público que devuelve la única instancia y un constructor privado para evitar instanciaciones externas.  
+
+### **1.2 Factory Method**  
+**Propósito:** Proporciona una interfaz para crear objetos en una superclase, pero permite a las subclases alterar el tipo de objetos que se crearán.  
+**Cómo funciona:** En lugar de llamar a un constructor directamente, se usa un método que devuelve instancias de diferentes clases derivadas.  
+
+### **1.3 Abstract Factory**  
+**Propósito:** Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.  
+**Cómo funciona:** Se define una fábrica abstracta con métodos para crear diferentes tipos de objetos, y se implementan fábricas concretas para distintas variantes.  
+
+### **1.4 Builder**  
+**Propósito:** Separa la construcción de un objeto complejo de su representación, permitiendo crear diferentes representaciones del mismo proceso de construcción.  
+**Cómo funciona:** Se usa una clase constructora que va agregando partes a un objeto paso a paso.  
+
+### **1.5 Prototype**  
+**Propósito:** Permite copiar objetos existentes sin que el código dependa de sus clases específicas.  
+**Cómo funciona:** Se define un método de clonación en la clase base que devuelve una copia de la instancia.  
+
+---  
+
+## 2. Estructurales  
+
+### **2.1 Adapter**  
+**Propósito:** Permite que clases con interfaces incompatibles trabajen juntas.  
+**Cómo funciona:** Se crea una clase que actúa como un intermediario entre dos interfaces diferentes.  
+
+### **2.2 Bridge**  
+**Propósito:** Desacopla una abstracción de su implementación, permitiendo que ambas evolucionen independientemente.  
+**Cómo funciona:** Se separan las partes de una clase en diferentes jerarquías (abstracción e implementación).  
+
+### **2.3 Composite**  
+**Propósito:** Permite tratar una composición de objetos como si fuera un único objeto.  
+**Cómo funciona:** Se crea una estructura de árbol donde los nodos pueden contener otros nodos o elementos individuales.  
+
+### **2.4 Decorator**  
+**Propósito:** Añade funcionalidad a un objeto dinámicamente sin modificar su estructura.  
+**Cómo funciona:** Se encapsula el objeto original en otro objeto que agrega nuevas funcionalidades.  
+
+### **2.5 Facade**  
+**Propósito:** Proporciona una interfaz unificada y simplificada para un conjunto de interfaces de un subsistema.  
+**Cómo funciona:** Se crea una clase que encapsula la complejidad interna de un conjunto de clases y expone una API simplificada.  
+
+### **2.6 Flyweight**  
+**Propósito:** Reduce el uso de memoria compartiendo objetos entre varias partes de la aplicación.  
+**Cómo funciona:** Se almacena un conjunto de objetos reutilizables y se comparten en lugar de crear nuevas instancias.  
+
+### **2.7 Proxy**  
+**Propósito:** Proporciona un sustituto o representante para otro objeto con el fin de controlar su acceso.  
+**Cómo funciona:** Se crea una clase que actúa como intermediario para realizar tareas adicionales antes o después de acceder al objeto real.  
+
+---  
+
+## 3. Comportamentales  
+
+### **3.1 Chain of Responsibility**  
+**Propósito:** Permite que múltiples objetos manejen una solicitud sin que el remitente conozca el receptor exacto.  
+**Cómo funciona:** Se pasa la solicitud a través de una cadena de manejadores hasta que uno de ellos la procesa.  
+
+### **3.2 Command**  
+**Propósito:** Convierte una solicitud en un objeto, permitiendo parametrizar clientes con diferentes solicitudes y operaciones.  
+**Cómo funciona:** Se encapsula una acción en un objeto y se proporciona un método `execute()` para ejecutarla.  
+
+### **3.3 Iterator**  
+**Propósito:** Permite recorrer una colección de elementos sin exponer su estructura interna.  
+**Cómo funciona:** Se define una interfaz de iteración y una clase concreta que implementa el recorrido.  
+
+### **3.4 Mediator**  
+**Propósito:** Reduce la dependencia entre múltiples objetos al hacer que se comuniquen a través de un objeto mediador.  
+**Cómo funciona:** Se crea una clase central que gestiona la comunicación entre los objetos participantes.  
+
+### **3.5 Memento**  
+**Propósito:** Permite capturar y restaurar el estado de un objeto sin violar el encapsulamiento.  
+**Cómo funciona:** Se almacena el estado del objeto en una estructura separada llamada memento.  
+
+### **3.6 Observer**  
+**Propósito:** Define una dependencia uno a muchos entre objetos, de manera que cuando uno cambia su estado, todos sus dependientes son notificados automáticamente.  
+**Cómo funciona:** Se mantiene una lista de observadores y se notifica a cada uno cuando el sujeto cambia.  
+
+### **3.7 State**  
+**Propósito:** Permite que un objeto altere su comportamiento cuando cambia su estado interno.  
+**Cómo funciona:** Se encapsulan los estados en clases separadas y se delegan las operaciones al estado actual.  
+
+### **3.8 Strategy**  
+**Propósito:** Permite definir una familia de algoritmos, encapsularlos y hacerlos intercambiables sin modificar el código del cliente.  
+**Cómo funciona:** Se definen diferentes estrategias dentro de clases separadas y se usa una interfaz común para seleccionarlas dinámicamente.  
+
+### **3.9 Template Method**  
+**Propósito:** Define la estructura de un algoritmo en una superclase, permitiendo que las subclases implementen partes específicas del algoritmo.  
+**Cómo funciona:** Se crea un método en la clase base que llama a métodos abstractos o con implementación predeterminada.  
+
+### **3.10 Visitor**  
+**Propósito:** Permite agregar nuevas operaciones a una jerarquía de clases sin modificar sus estructuras.  
+**Cómo funciona:** Se define una clase visitante que contiene métodos específicos para cada tipo de objeto a visitar.  
+
+---  
